@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+
+}
+header {
+    background-image: url(./images/eggHero01.png);
+    background-size: cover;
+    height: 100vh;
+    padding: 1em 10em;
+    color: #fff;
+
+}
+nav{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.headerContent h1{
+    font-size: 76px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 400;
+    width: 2em;
+    line-height: 1,2;
+    margin-top: 2em;
+}
+.headerContent h6{
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 300;
+    width: 20em;
+    line-height: 1,2;
+    margin: 2em 0;
+    
+}
+.cta {
+    cursor: pointer;
+    margin: 3em 0;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+    color: #fff;
+    border: solid 3px #fff;
+    padding: .8em 1.5em;
+    border-radius: 50px;
+
+}
+.midsection {
+    background: hsla(216, 9%, 83%, 1);
+    display: flex;
+    padding: 10em;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+
+
+
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    background-image: url(./images/cardBG.png);
+    margin: 1em;
+    width: 33%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon{
+    padding-bottom: 1.2em;
+}
+.lowerinfo{
+    background: #d9d9d9;
+    padding: 2em;
+    display: flex;
+}
+footer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10em;
+    background: rgb(146,99,65);
+    background: linear-gradient(90deg, rgba(146, 99, 65) 0%,rgba(194,125,75,1) 100%);
+    color: #fff;
+}
