@@ -10,7 +10,12 @@ body{
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
-
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+p {
+    font-family:'Open sans', sans-serif;
+    font-weight: 400;
 }
 header {
     background-image: url(./images/eggHero01.png);
@@ -31,7 +36,7 @@ nav{
     font-weight: 400;
     width: 2em;
     line-height: 1,2;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 .headerContent h6{
     font-size: 24px;
@@ -44,21 +49,21 @@ nav{
 }
 .cta {
     cursor: pointer;
-    margin: 3em 0;
+    display: flex;
     font-size: 20px;
     text-decoration: none;
     font-family: sans-serif;
     list-style: none;
     color: #fff;
     border: solid 3px #fff;
-    padding: .8em 1.5em;
+    padding: .5em 2em;
     border-radius: 50px;
 
 }
 .midsection {
     background: hsla(216, 9%, 83%, 1);
     display: flex;
-    padding: 10em;
+    padding: 4em 10em ;
     flex-direction: column;
     align-items: center;
     height: 100vh;
@@ -68,27 +73,33 @@ nav{
 
 }
 .cards {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .card{
     background-image: url(./images/cardBG.png);
     margin: 1em;
-    width: 33%;
     background-repeat: no-repeat;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     padding: 2em;
     align-items: center;
     justify-content: space-between;
 }
+.card p{
+    padding: 2em 0em;
+}
 .icon{
-    padding-bottom: 1.2em;
+    position: relative;
+    left: 45%;
 }
 .lowerinfo{
     background: #d9d9d9;
     padding: 2em;
     display: flex;
+}
+.text-wrapper{
+    margin: 1em;
 }
 footer{
     height: 100vh;
@@ -99,4 +110,76 @@ footer{
     background: rgb(146,99,65);
     background: linear-gradient(90deg, rgba(146, 99, 65) 0%,rgba(194,125,75,1) 100%);
     color: #fff;
+}
+
+@media (max-width: 400px){
+   header {
+    background-image: url(./images/eggHero01mobile.png);
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+   }
+   nav{
+    padding: 0em .5em;
+   }
+   .headerContent h1 {
+    font-size: 42px;
+   }
+   .headerContent{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    justify-content: space-around;
+    margin-bottom: 10em;
+   }
+   .cards {
+    display: flex;
+    flex-direction: column;
+   }
+   .headerContent h6{
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 300;
+    width: 80vw;
+    line-height: 1,2;
+    margin: 2em 0;
+    }
+    .midsection {
+        display: flex;
+        padding: 4em;
+        align-items: center;
+        height: 200vh;
+        justify-content: space-between;
+    
+    }
+    .cards {
+        display: flex;
+
+    }
+    .lowerinfo{
+        background: #d9d9d9;
+        margin-top: 2em;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    footer{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5em 2em;
+        background: rgb(146,99,65);
+        background: linear-gradient(90deg, rgba(146, 99, 65) 0%,rgba(194,125,75,1) 100%);
+        color: #fff;
+    }
 }
